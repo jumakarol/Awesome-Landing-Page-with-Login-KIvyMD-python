@@ -1,0 +1,63 @@
+Screen:
+	MDBoxLayout:
+		orientation:'vertical'
+		MDToolbar:
+			title: 'Landing'
+			left_action_items: [["menu", lambda x: app.navigation_menu()]]
+			right_action_items: [["magnify", lambda x: app.navigation_menu()]]
+			elevation: 8
+
+
+
+
+
+		MDLabel:
+			text: 'Please Login'
+			halign: 'center'
+			valign: 'top'
+			theme_text_color: 'Custom'
+			text_color: (1,0,1,1)
+			font_style: 'H3'
+
+		MDTextField:
+			hint_text: "E-mail"
+			width: 300
+			size_hint_x: None
+			pos_hint: {'center_x': 0.5,'center_y': 0.9}
+			icon_right: 'email'
+		MDTextField:
+			hint_text: "username"
+			width: 300
+			size_hint_x: None
+			pos_hint: {'center_x': 0.5,'center_y': 0.9}
+			icon_right: 'account'
+		MDTextField:
+			hint_text: "Password"
+			helper_text: "or click forgot password"
+			helper_text_mode: 'on_focus'
+			width: 300
+			size_hint_x: None
+			pos_hint: {'center_x': 0.5,'center_y': 0.9}
+			icon_right: 'eye'
+		MDRectangleFlatButton:
+			text: 'Login In'
+			pos_hint: {'center_x': 0.5,'center_y': 0.9}
+			width: 150
+
+
+
+
+
+
+		MDBottomAppBar:
+			MDToolbar:
+				
+				left_action_items: [["cog", lambda x: app.navigation_menu()]]
+				right_action_items: [["account", lambda x: app.navigation_menu()]]
+				type: 'bottom'
+				icon: 'home'
+				on_action_button: app.navigation_menu()
+
+				
+				
+
